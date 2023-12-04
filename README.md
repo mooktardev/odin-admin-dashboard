@@ -7,7 +7,7 @@ This is an assignement from The Odin Projects.
 
 
 ## Demo
-[Live preview](https://admin-dashboard-odin.vercel.app)
+[Live preview](https://odin-admin-dashboard-tau.vercel.app/)
 
 
 ## Tech Stack
@@ -18,5 +18,5 @@ HTML5 and CSS3 (*TailwindCSS*)
 - [@mooktardev](https://www.github.com/mooktardev)
 
 
-## Licence
+## License
 MIT
