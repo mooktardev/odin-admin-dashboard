@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .sidebar__menu-item,
+    .sidebar__menu-item a,
+    .sidebar__menu-item img {
+        @apply transition duration-300 ease-in-out;
+    }
+
+    .sidebar__menu-item {
+        @apply border-l-[6px] border-blue-500;
+    }
+
+    .sidebar__menu-item.active,
+    .sidebar__menu-item:hover {
+        @apply border-blue-300 bg-blue-400/50;
+    }
+
+    .sidebar__menu-item a {
+        @apply flex items-center gap-x-2 px-5 py-2 text-lg hover:translate-x-1;
+    }
+
+    .sidebar__menu-item__icon {
+        @apply h-5 w-5;
+    }
+
+    .bottom__actions-item {
+        @apply rounded-full bg-blue-600 px-4 py-1 text-white shadow-sm transition duration-300 ease-in-out hover:scale-110 hover:bg-blue-700;
+    }
+
+    .subsection__title {
+        @apply mb-4 text-lg font-bold;
+    }
+
+    .content__list-card {
+        @apply flex flex-col gap-y-3 rounded-lg border-l-8 border-yellow-500 bg-white p-7 shadow-md;
+    }
+
+    .card__title {
+        @apply text-xl font-semibold;
+    }
+
+    .card__description {
+        @apply text-base;
+    }
+
+    .card__actions {
+        @apply flex items-center justify-end gap-x-4;
+    }
+
+    .card__actions a {
+        @apply h-5 w-5 transition duration-300 ease-in-out hover:scale-125;
+    }
+
+    .announcements_list-item {
+        @apply p-3 text-sm;
+    }
+
+    .announcements_list-item h4 {
+        @apply font-bold;
+    }
+
+    .trending__list-item {
+        @apply flex items-center gap-x-2 p-2;
+    }
+
+    .trending__list-item_icon {
+        @apply h-12 w-12;
+    }
+
+    .trending__list-item__text {
+        @apply text-sm;
+    }
+
+    .trending__list-item__text h5 {
+        @apply font-semibold;
+    }
+}

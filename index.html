@@ -1,12 +1,337 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/odin-lined.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard - The Odin Project</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <!-- ========== Start CONTAINER ========== -->
+    <div class="w-full flex relative">
+      <!-- ========== Start SIDEBAR ========== -->
+      <div class="sidebar w-1/6 h-screen sticky top-0 left-0 bg-blue-500 text-white" id="sidebar">
+        <!-- Sidebar Header -->
+        <header class="sibebar__header flex items-center px-5 py-4 gap-x-2">
+          <img src="./view-dashboard.png" alt="Dashboard" class="logo w-8 h-8" />
+          <h2 class="site__title text-lg font-bold">Dashboard</h2>
+        </header>
+
+        <!-- Sidebar Menu -->
+        <div class="sidebar__menu flex flex-col gap-y-10">
+          <!-- Side Menu First -->
+          <ul class="sidebar__menu-menu menu__first flex flex-col">
+            <li class="sidebar__menu-item active">
+              <a href="#">
+                <img
+                  src="./home.png"
+                  alt="Home"
+                  class="sidebar__menu-item__icon"
+                />
+                Home
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                src="./card-account-details.png"
+                alt="Profile"
+                class="sidebar__menu-item__icon"
+                />
+                Profile
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                src="./message-reply.png"
+                alt="Message"
+                class="sidebar__menu-item__icon"
+                />
+                Message
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                src="./clock-time-three.png"
+                alt="Clock"
+                class="sidebar__menu-item__icon"
+                />
+                History
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                  src="./note-multiple (1).png"
+                  alt="Tasks"
+                  class="sidebar__menu-item__icon"
+                />
+                Tasks
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                  src="./account-group.png"
+                  alt="community"
+                  class="sidebar__menu-item__icon"
+                />
+                Community
+              </a>
+            </li>
+          </ul>
+
+          <!-- Side Menu Second -->
+          <ul class="sidebar__menu-menu menu__second flex flex-col">
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                  src="./cog.png"
+                  alt="setting"
+                  class="sidebar__menu-item__icon"
+                />
+                Setting
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                  src="./help-box.png"
+                  alt="support"
+                  class="sidebar__menu-item__icon"
+                />
+                Support
+              </a>
+            </li>
+            <li class="sidebar__menu-item">
+              <a href="#">
+                <img
+                  src="./shield-check.png"
+                  alt="privacy"
+                  class="sidebar__menu-item__icon"
+                />
+                Privacy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ========== End SIDEBAR ========== -->
+
+      <!-- ========== Start MAIN ========== -->
+      <main class="main w-5/6 flex flex-col flex-nowrap relative" id="main">
+        <!-- ========== Start MAIN HEADER ========== -->
+        <header class="main__header sticky top-0 right-0 bg-white flex flex-col flex-wrap p-4 gap-y-6 z-10 shadow-md">
+          <!-- Main Header Top -->
+          <div class="main__header-top w-full flex items-center justify-between">
+            <search class="main__header-top__search">
+              <form action="#" class="search flex items-center gap-x-2" id="search">
+                <label for="search-input">
+                  <img
+                    src="./magnify.svg"
+                    alt="Search Icon"
+                    class="icon search__icon"
+                  />
+                </label>
+                <input
+                  type="search"
+                  name="search-input"
+                  id="search-input"
+                  class="search__text w-96 rounded-full bg-blue-50 px-3 py-1 outline-none border border-blue-100"
+                  placeholder="Search"
+                />
+              </form>
+            </search>
+            <!-- Search -->
+
+            <div class="main__header-top__links flex items-center">
+              <a href="#" id="" class="transition ease-in-out duration-300 hover:scale-110 mr-5">
+                <img
+                  src="./bell-ring-outline.svg"
+                  alt="Bell ring"
+                  class="icon message__icon animate-none hover:animate-wiggle hover:scale-125"
+                />
+              </a>
+              <img src="./user.png" alt="" class="icon user__icon w-10 h-10 mr-2" />
+              <h3 class="user__name text-lg font-semibold"><a href="#">Morgan Oakley</a></h3>
+            </div>
+          </div>
+          <!-- header top -->
+
+          <!-- Main Header Bottom -->
+          <div class="main__header-bottom flex items-center justify-between">
+            <div class="main__header-bottom__welcome flex items-center gap-x-3">
+              <img src="./user.png" alt="" class="welcome-user__icon w-12 h-12" />
+              <div class="welcome-content -gap-y-1 text-lg font-semibold">
+                <p class="text-xs">Hi there,</p>
+                <h2>Morgan Oakley (@morgan)</h2>
+              </div>
+            </div>
+            <!-- welcome -->
+            <div class="main__header-bottom__actions">
+              <ul class="bottom__actions-menu flex items-center gap-x-4">
+                <li class="bottom__actions-item"><a href="#" class="">New</a></li>
+                <li class="bottom__actions-item"><a href="#" class="">Upload</a></li>
+                <li class="bottom__actions-item"><a href="#" class="">Share</a></li>
+              </ul>
+            </div>
+            <!-- actions -->
+          </div>
+          <!-- header bottom -->
+        </header>
+        <!-- ========== End MAIN HEADER ========== -->
+
+        <!-- ========== Start MAIN CONTENT ========== -->
+        <section class="main__content relative w-full bg-blue-50 grid grid-cols-4">
+          <!-- Content Feed -->
+          <div class="main__content-content__feed col-span-3 p-6">
+            <h3 class="main__content-content__header subsection__title">Your Projects</h3>
+
+            <!-- Content List -->
+            <section class="main__content-content__list grid grid-cols-2 gap-7">
+              <!-- Card Item -->
+              <article class="content__list-card">
+                <h3 class="card__title">Admin Dashboard</h3>
+                <p class="card__description">
+                  Paphian perchance stalked scape charms by none cell wandered. Mighty yet seraphs through name near within her and goodly. Childe.
+                </p>
+                <div class="card__actions">
+                  <a href="#" class=""><img src="./star-plus-outline.svg" alt="star" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./eye-plus-outline.svg" alt="eye" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./source-fork.svg" alt="source" class="card__actions-icon"></a>
+                </div>
+              </article> <!-- End Card Iten -->
+              <!-- Card Item -->
+              <article class="content__list-card">
+                <h3 class="card__title">Hunter Game</h3>
+                <p class="card__description">
+                  Ameres drapeaux j'ai de éclate les violettes nacreux sans ou a, mer plus flammes tendus instants de des et impassibles.
+                </p>
+                <div class="card__actions">
+                  <a href="#" class=""><img src="./star-plus-outline.svg" alt="star" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./eye-plus-outline.svg" alt="eye" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./source-fork.svg" alt="source" class="card__actions-icon"></a>
+                </div>
+              </article> <!-- End Card Iten -->
+              <!-- Card Item -->
+              <article class="content__list-card">
+                <h3 class="card__title">School Management System</h3>
+                <p class="card__description">
+                  Tout la beauté pleurs ce décor hélas m'appelle faite. A hélas tes sur «la magnifique tes extase, a monstre dans.
+                </p>
+                <div class="card__actions">
+                  <a href="#" class=""><img src="./star-plus-outline.svg" alt="star" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./eye-plus-outline.svg" alt="eye" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./source-fork.svg" alt="source" class="card__actions-icon"></a>
+                </div>
+              </article> <!-- End Card Iten -->
+              <!-- Card Item -->
+              <article class="content__list-card">
+                <h3 class="card__title">Forex Trading Plateform</h3>
+                <p class="card__description">
+                  Tapping name no grim as of denser. On him all and into, raven hauntedtell pallid and distant, fancy in shutter.
+                </p>
+                <div class="card__actions">
+                  <a href="#" class=""><img src="./star-plus-outline.svg" alt="star" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./eye-plus-outline.svg" alt="eye" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./source-fork.svg" alt="source" class="card__actions-icon"></a>
+                </div>
+              </article> <!-- End Card Iten -->
+              <!-- Card Item -->
+              <article class="content__list-card">
+                <h3 class="card__title">3D Modern Portfolio</h3>
+                <p class="card__description">
+                  Labore amet erat lorem tempor labore magna, kasd ea rebum gubergren tempor vero sea rebum amet. Sit voluptua no sed.
+                </p>
+                <div class="card__actions">
+                  <a href="#" class=""><img src="./star-plus-outline.svg" alt="star" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./eye-plus-outline.svg" alt="eye" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./source-fork.svg" alt="source" class="card__actions-icon"></a>
+                </div>
+              </article> <!-- End Card Iten -->
+              <!-- Card Item -->
+              <article class="content__list-card">
+                <h3 class="card__title">Super Cool Project</h3>
+                <p class="card__description">
+                  To smile in to a harolds. Along to passion cell forgot. Delphis mammon flash been rake soon but these at..
+                </p>
+                <div class="card__actions">
+                  <a href="#" class=""><img src="./star-plus-outline.svg" alt="star" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./eye-plus-outline.svg" alt="eye" class="card__actions-icon"></a>
+                  <a href="#" class=""><img src="./source-fork.svg" alt="source" class="card__actions-icon"></a>
+                </div>
+              </article> <!-- End Card Iten -->
+            </section>
+          </div>
+          <!-- End Content Feed -->
+  
+          <!-- Content Aside -->
+          <aside class="main__content-content__aside col-span-1 p-6 flex flex-col gap-y-8">
+            <!-- Content Aside Announcements -->
+            <section class="content__aside-announcements">
+              <h3 class="announcements__title subsection__title">Announcements</h3>
+              <div class="announcements__list flex divide flex-col divide-y-2 bg-white shadow-md rounded-lg px-6 py-4">
+                <div class="announcements_list-item">
+                  <h4>Site Maintenanace</h4>
+                  <p>Ni kapti mi permesus mi revenis tiel kaj sorton savi li, povas viro tiuj kaj.</p>
+                </div>
+                <div class="announcements_list-item">
+                  <h4>Community Share Day</h4>
+                  <p>Ruft gezagt zu wie ja und im, mir's muß du da manchmal, großer die seufzer.</p>
+                </div>
+                <div class="announcements_list-item">
+                  <h4>Updated Privacy Policy</h4>
+                  <p>To glee lineage call is heart to taste girls. Lay departed happy misery friend break,.</p>
+                </div>
+              </div>
+            </section>
+  
+            <!-- Content Aside Trending -->
+            <div class="content__aside-trending">
+              <h4 class="trending__title subsection__title">Trending</h3>
+              <ul class="trending__list flex flex-col bg-white shadow-md rounded-lg p-4">
+                <li class="trending__list-item">
+                  <img src="./dog.png" alt="dog" class="trending__list-item_icon">
+                  <div class="trending__list-item__text">
+                    <h5>@tegan</h5>
+                    <p>World Peace Builder</p>
+                  </div>
+                </li>
+                <li class="trending__list-item">
+                  <img src="./user.png" alt="dog" class="trending__list-item_icon">
+                  <div class="trending__list-item__text">
+                    <h5>@morgan</h5>
+                    <p>Super Cool Project</p>
+                  </div>
+                </li>
+                <li class="trending__list-item">
+                  <img src="./listen-music.png" alt="dog" class="trending__list-item_icon">
+                  <div class="trending__list-item__text">
+                    <h5>@Kendall</h5>
+                    <p>Life Changing App</p>
+                  </div>
+                </li>
+                <li class="trending__list-item">
+                  <img src="./snowman.png" alt="dog" class="trending__list-item_icon">
+                  <div class="trending__list-item__text">
+                    <h5>@alex</h5>
+                    <p>No Traffic Maker</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <!-- End Content Aside -->
+        </section>
+        <!-- ========== End MAIN CONTENT ========== -->
+      </main>
+      <!-- ========== End MAIN ========== -->
+    </div>
+    <!-- ========== End CONTAINER ========== -->
+
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
